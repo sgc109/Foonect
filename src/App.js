@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Menubar from './app/Menubar';
+import Home from './app/page/Home';
+import Join from './app/page/Join';
+import Login from './app/page/Login';
+import Mypage from './app/page/Mypage';
+import FriendList from './app/page/FriendList';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <Router>
+          <Menubar></Menubar>
+          <Route path='/' exact component={Home}></Route>
+          <Route path='/login' component={Login}></Route>
+          <Route path='/join' component={Join}></Route>
+          <Route path='/mypage' component={Mypage}></Route>
+          <Route path='/friends' component={FriendList}></Route>
+        </Router>
+
+      </div>
+    );
+  }
 }
 
 export default App;
