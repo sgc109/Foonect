@@ -9,7 +9,7 @@ class MenuHeader extends React.Component {
 
         return (
             <div className="MenuHeader">
-                
+                {child}
             </div>
         );
     }

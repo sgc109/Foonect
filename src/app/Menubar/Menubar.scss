@@ -1,4 +1,19 @@
 .Menubar {
-    background-color: black;
-    height: 60px;
+  background-color: white;
+  height: 50px;
+  box-shadow: 0 0 10px black;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  padding: 10px;
+  padding-left: 10%;
+  padding-right: 10%;
+  align-items: center;
+
+  .globalMenus {
+    flex-grow: 1;
+    display: flex;
+    justify-items: end;
+    margin-left: 10px;
+  }
 }

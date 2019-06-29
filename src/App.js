@@ -1,24 +1,51 @@
 import React from 'react';
 import './App.css';
 import Menubar from './app/Menubar';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { routes } from './app/Router';
 import Home from './app/page/Home';
 import Join from './app/page/Join';
 import Login from './app/page/Login';
 import Mypage from './app/page/Mypage';
 import FriendList from './app/page/FriendList';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loggedIn: false,
+    };
+  }
+
+  MenubarScreen = (props) => {
+    return (
+      <>
+        <Menubar
+          loggedIn={this.state.loggedIn}
+        ></Menubar>
+        <Route exact path='/' component={Home} />
+        <Route path='/mypage' component={Mypage} />
+        <Route path='/friends' component={FriendList} />
+      </>
+    );
+  }
+
+  handleLogin = () => {
+    this.setState({
+      loggedIn: true,
+    });
+    
+  }
+
   render() {
     return (
       <div className="App">
         <Router>
-          <Menubar></Menubar>
-          <Route path='/' exact component={Home}></Route>
-          <Route path='/login' component={Login}></Route>
-          <Route path='/join' component={Join}></Route>
-          <Route path='/mypage' component={Mypage}></Route>
-          <Route path='/friends' component={FriendList}></Route>
+          <Switch>
+            <Route exact path='/login' component={() => <Login handleLogin={this.handleLogin}></Login>} />
+            <Route exact path='/join' component={Join} />
+            <Route component={this.MenubarScreen} />
+          </Switch>
         </Router>
 
       </div>

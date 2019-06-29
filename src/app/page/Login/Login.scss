@@ -1,0 +1,47 @@
+@import "../../../styles/utils.scss";
+
+.Login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+
+  .modal {
+    width: 500px;
+    height: 600px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .textField {
+      text-align: left;
+      width: 90%;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      &[type="text"] {
+        width: 90%;
+        height: 35px;
+        font-size: 20px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    button {
+      text-align: center;
+      width: 90%;
+      font-size: 20px;
+      color: white;
+      background-color: $violet;
+      height: 55px;
+    }
+  }
+}

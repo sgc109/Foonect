@@ -6,7 +6,7 @@ class MenuItem extends React.Component {
     render() {
         return (
             <div className="MenuItem">
-                {props.title}
+                {this.props.title}
             </div>
         );
     }
