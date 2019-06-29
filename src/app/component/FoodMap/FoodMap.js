@@ -12,7 +12,7 @@ export default withScriptjs(withGoogleMap((props) =>
             rotateControl: false,
             fullscreenControl: false
         }}
-        defaultZoom={14}
+        defaultZoom={11.8}
         defaultCenter={{ lat: 37.4786502, lng: 126.9650535 }}
     >
         {props.isMarkerShown && <Marker position={{ lat: 37.4786502, lng: 126.9650535 }} />}

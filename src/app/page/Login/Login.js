@@ -11,10 +11,14 @@ class Login extends React.Component {
             <div className="Login">
                 <div className="modal">
                     <div className="textField">이메일</div>
-                    <input type="text" />
+                    <input type="text" placeholder="이메일 주소" />
                     <div className="textField">비밀번호</div>
-                    <input type="text" />
-                    <button onClick={handleLogin}><Link to="/">로그인</Link></button>
+                    <input type="text" placeholder="비밀번호" />
+                    <button onClick={handleLogin}>
+                        <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+                            로그인
+                        </Link>
+                    </button>
                 </div>
             </div>
         );

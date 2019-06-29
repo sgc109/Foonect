@@ -11,9 +11,15 @@
   align-items: center;
 
   .globalMenus {
+    display: flex;
+    margin-left: 10px;
+  }
+
+  .userMenus {
     flex-grow: 1;
     display: flex;
-    justify-items: end;
-    margin-left: 10px;
+    justify-content: flex-end;
+    height: 60%;
+    align-items: center;
   }
 }

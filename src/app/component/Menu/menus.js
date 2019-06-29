@@ -1,4 +1,4 @@
-import FriendList from '../page/FriendList';
+import FriendList from '../../page/FriendList';
 
 export const menus = [
     {
