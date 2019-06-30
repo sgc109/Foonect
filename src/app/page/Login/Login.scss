@@ -33,6 +33,11 @@
         padding: 10px;
         margin-bottom: 20px;
       }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $primaryColor;
+      }
     }
 
     button {

@@ -1,10 +1,28 @@
+@import "../../../../styles/utils.scss";
+
 .Searchbar {
-  &[type="text"] {
-    width: 300px;
-    height: 100%;
-    margin-right: 30px;
-    font-size: 20px;
-    font-weight: 200;
-    padding: 8px 12px 8px 12px;
+  //   z-index: 999;
+  //   position: relative;
+  input {
+    &[type="text"] {
+      width: 500px;
+      box-sizing: border-box;
+      height: 90%;
+      margin-right: 30px;
+      font-size: 20px;
+      font-weight: 200;
+      padding: 8px 12px 8px 12px;
+      border-radius: 10px;
+      border: solid 1px #ccc;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $primaryColor;
+      }
+    }
   }
+}
+
+.autocomplete-dropdown-container {
+  width: 500px;
 }

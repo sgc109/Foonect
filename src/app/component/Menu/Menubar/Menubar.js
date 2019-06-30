@@ -5,6 +5,7 @@ import MenuHeader from '../MenuHeader';
 import MenuItem from '../MenuItem';
 import Searchbar from '../Searchbar';
 import { menus } from '../menus';
+// import SearchbarWrapper from '../../../container/SearchbarWrapper';
 
 class Menubar extends React.Component {
   render() {
@@ -32,12 +33,14 @@ class Menubar extends React.Component {
           }
         </div>
         <div className="userMenus">
-          <Searchbar></Searchbar>
+          <Searchbar
+            handlePlaceSeleceted={this.props.handlePlaceSeleceted}
+          ></Searchbar>
           {
             loggedIn
               ? null
               : (
-                <Link to={'/login/'} style={{ textDecoration: 'none', color: 'black' }}>
+                <Link to={'/login/'} style={{ textDecoration: 'none', color: 'black', margin: '1%' }}>
                   <MenuItem title={'로그인/가입'}>
 
                   </MenuItem>
